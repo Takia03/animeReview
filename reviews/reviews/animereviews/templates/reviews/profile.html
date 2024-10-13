@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.user_name }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ user.user_name }}'s Profile</h1>
+
+    <!-- Watched Movies -->
+    <h2>Watched Movies</h2>
+    <ul>
+        {% for movie in watched_movies %}
+            <li>{{ movie.name }} - Tags: {{ movie.tags|join:", " }}</li>
+        {% empty %}
+            <li>No movies watched yet.</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Wishlist Movies -->
+    <h2>Wishlist Movies</h2>
+    <ul>
+        {% for movie in wishlist_movies %}
+            <li>{{ movie.name }} - Tags: {{ movie.tags|join:", " }}</li>
+        {% empty %}
+            <li>No movies in wishlist.</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Reviewed Movies -->
+    <h2>Reviewed Movies</h2>
+    <ul>
+        {% for movie in reviewed_movies %}
+            <li>{{ movie.name }} - Tags: {{ movie.tags|join:", " }}</li>
+        {% empty %}
+            <li>No movies reviewed yet.</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Back to Home Page Button -->
+    <a href="{% url 'home' user.user_name %}">
+        <button>Back to Home</button>
+    </a>
+</body>
+</html>
+
+
+<!--  CSS styles inside a <style> block -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7e7f6;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #813aba;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+
+    button:hover {
+        background-color: #6d2e8f;
+    }
+
+</style>

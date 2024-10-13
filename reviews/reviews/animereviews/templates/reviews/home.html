@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Tags</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'animereviews/css/styles.css' %}">
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome, {{ user.user_name }}</h1>
+
+        <!-- Profile Section: Image and Button -->
+        <div class="profile-section">
+           
+            <a href="{% url 'profile' user.user_name %}">
+                <button>Go to Profile</button>
+            </a>
+        </div>
+
+        <!-- Form to select favorite tags -->
+    <form method="POST">
+    {% csrf_token %}
+    <h2>Select your favorite tags:</h2>
+    <div class="tags">
+        {% for tag in unique_tags %}
+            <input type="checkbox" id="{{ tag }}" name="tags" value="{{ tag }}">
+            <label for="{{ tag }}">{{ tag }}</label><br>
+        {% endfor %}
+    </div>
+    
+    <button type="submit">Show Suggested Movies</button>
+    </form>
+
+        
+    </div>
+</body>
+</html>
+
+<style>
+    /* Additional CSS to style the profile image and button */
+    .profile-section {
+        text-align: left; /* Center the profile pic and button */
+        margin-bottom: 20px;
+    }
+
+    
+
+    .home-container {
+        text-align: left; /* Left-align all text */
+        padding-left: 20px;
+    }
+
+    .tags {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #813aba;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #ca86f5;
+    }
+</style>

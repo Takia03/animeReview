@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+</head>
+<body>
+    <h1>{{ user.user_name }}'s Favorite Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.name }} - Tags: {{ movie.tags|join:", " }}</li>
+        {% empty %}
+            <li>No favorite movies found</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

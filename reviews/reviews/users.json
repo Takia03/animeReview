@@ -1,0 +1,119 @@
+[
+    {
+        "user_name": "john_doe",
+        "password": "password123",
+        "favorite_tags": [
+            "romance",
+            "fantasy"
+        ],
+        "watched_movies": [
+            2
+        ],
+        "wishlist_movies": [
+            1
+        ],
+        "reviews": [
+            {
+                "movie_id": 2,
+                "comment": "Great movie with beautiful animation."
+            }
+        ]
+    },
+    {
+        "user_name": "jane_smith",
+        "password": "securepassword",
+        "favorite_tags": [
+            "adventure",
+            "action"
+        ],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "takia",
+        "password": "Takhin155",
+        "favorite_tags": [
+            "romance",
+            "family"
+        ],
+        "watched_movies": [
+            1
+        ],
+        "wishlist_movies": [],
+        "reviewed_movies": [
+            1,
+            2,
+            4,
+            3
+        ],
+        "reviews": []
+    },
+    {
+        "user_name": "",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "watching_movies": [],
+        "wishlist_movies": []
+    },
+    {
+        "user_name": "farhin",
+        "password": "12345",
+        "favorite_tags": [
+            "adventure",
+            "family",
+            "romance"
+        ],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "farhin",
+        "password": "qwerty",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "farhin",
+        "password": "qwerty",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "takia",
+        "password": "Takhin155",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "farhin",
+        "password": "1234567",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "takia",
+        "password": "Takhin155",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    },
+    {
+        "user_name": "takia",
+        "password": "Takhin155",
+        "favorite_tags": [],
+        "watched_movies": [],
+        "wishlist_movies": [],
+        "reviews": []
+    }
+]

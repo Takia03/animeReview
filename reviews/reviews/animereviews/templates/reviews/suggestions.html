@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Movies</title>
+    
+    <!-- Load static tag for linking static files like CSS -->
+    {% load static %}
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{% static 'animereviews/css/styles.css' %}">
+
+</head>
+<body>
+    <h1>Movie Suggestions for {{ user.user_name }}</h1>
+
+    <ul>
+        {% for movie in suggested_movies %}
+        <div class="movie-item">
+            <h2>{{ movie.name }}</h2>
+            <p>Tags: {{ movie.tags|join:", " }}</p>
+            <p>Status: {{ movie.status }}</p>
+            <p>Reviews: {{ movie.review_count }} reviews</p>  <!-- Display review count -->
+            
+            <!-- Center the description button -->
+            <div class="button-wrapper">
+                <a href="{% url 'movie_detail' movie.id user.user_name %}">
+                    <button class="view-description-btn">View Description</button>
+                </a>
+            </div>
+        </div>
+        {% empty %}
+            <li>No movie suggestions available for the selected tags.</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Back to Home Button -->
+    <div class="back-button-container">
+        <a href="{% url 'home' user.user_name %}">
+            <button class="back-to-home-btn">Back to Home</button>
+        </a>
+    </div>
+</body>
+</html>
+
+<!-- CSS styles inside a <style> block -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7e7f6;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .movie-item {
+        border: 1px solid #f6eeee;
+        padding: 20px;
+        margin: 10px;
+        background-color: #efd5f6;
+        border-radius: 8px;
+    }
+
+    .button-wrapper {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .view-description-btn {
+        padding: 10px;
+        background-color: #813aba;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .back-button-container {
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 30px;
+        font-size: 16px;
+    }
+
+    .back-to-home-btn {
+        padding: 10px;
+        background-color: #813aba;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .back-to-home-btn:hover, .view-description-btn:hover {
+        background-color: #ca86f5;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 10px;
+    }
+</style>

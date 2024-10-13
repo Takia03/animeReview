@@ -1,0 +1,18 @@
+[
+    {
+        "movie_id": 1,
+        "user_name": "john_doe",
+        "comment": "An amazing movie with a mind-bending plot!"
+    },
+    {
+        "movie_id": 3,
+        "user_name": "jane_doe",
+        "comment": "Loved the fantasy world!"
+    },
+
+    {
+        "movie_id": 2,
+        "user_name": "jane_doe",
+        "comment": "Loved it!"
+    }
+]

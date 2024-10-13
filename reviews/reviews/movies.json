@@ -1,0 +1,41 @@
+
+[
+    {
+        "id": 1,
+        "name": "Whisper of the Heart",
+        "tags": ["family", "romance"],
+        "reviews": [],
+        "status": "Wishlist"
+    },
+    {
+        "id": 2,
+        "name": "A Whisker Away",
+        "tags": ["romance", "fantasy"],
+        "reviews": [],
+        "status": "Watched"
+    },
+    {
+        "id": 3,
+        "name": "Spirited Away",
+        "tags": ["fantasy", "adventure"],
+        "reviews": [],
+        "status": "Watched"
+    },
+  
+    {
+        "id": 4,
+        "name": "My Neighbor Totoro",
+        "tags": ["family", "fantasy"],
+        "reviews": [],
+        "status": "Wishlist"
+    },
+  
+    {
+        "id": 5,
+        "name": "The Cat Returns",
+        "tags": ["fantasy", "adventure"],
+        "reviews": [],
+        "status": "Wishlist"
+    }
+  ]
+  
